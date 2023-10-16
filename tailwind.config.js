@@ -7,12 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        montserrat: 'Montserrat',
+        obidee: 'Odibee Sans',
+        lobster: 'Lobster Two',
+      },
+      colors: {
+        night: '#141115',
+        aqua: '#B5FED9',
+        yellow: '#F3D34A',
+        verdigris: '#41BEBE',
       },
     },
   },
   plugins: [],
-}
+};
