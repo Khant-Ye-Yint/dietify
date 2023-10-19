@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
               </h1>
             </Link>
           </header>
-          <div className="container flex-1">{children}</div>
+          <div className="container flex-1 px-5">{children}</div>
           <footer className="flex items-center justify-center min-h-[10vh]">
             <p className="text-center">
               khantyeyint &copy; {new Date().getFullYear()}
