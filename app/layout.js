@@ -1,6 +1,7 @@
 import './globals.css';
 import '@fontsource/lobster-two';
 import '@fontsource/montserrat';
+import '@fontsource/montserrat/700.css';
 import '@fontsource/odibee-sans';
 
 import Link from 'next/link';

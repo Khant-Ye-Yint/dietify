@@ -18,6 +18,9 @@ module.exports = {
         yellow: '#F3D34A',
         verdigris: '#41BEBE',
       },
+      fontWeight: {
+        bolder: '5000',
+      },
     },
   },
   plugins: [],
