@@ -1,6 +1,6 @@
 const NutritionCard = ({ attritube, value }) => {
   return (
-    <div className="px-5 py-3 rounded-lg shadow-xl w-[180px] flex flex-col justify-between items-start">
+    <div className="px-5 py-3 rounded-lg shadow-xl w-[160px] md:w-[180px] flex flex-col justify-between items-start">
       <h1 className="text-4xl font-obidee">{attritube}</h1>
       <p className="text-lg font-bold text-verdigris">{value}</p>
     </div>
@@ -9,7 +9,7 @@ const NutritionCard = ({ attritube, value }) => {
 
 const NutritionInfo = ({ attritube, value }) => {
   return (
-    <div className="px-5 py-3  w-[180px] md:w-[200px] flex flex-col justify-between items-start">
+    <div className="px-5 py-3  w-[160px] md:w-[200px] flex flex-col justify-between items-start">
       <h1 className="text-2xl font-obidee">{attritube}</h1>
       <p className="text-lg">{value}</p>
     </div>
