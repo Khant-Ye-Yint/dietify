@@ -1,16 +1,22 @@
 import { useRef } from 'react';
 import { fetchData } from '@/hooks/fetchData';
 
-const SearchBar = ({ setData, setIsLoading }) => {
+const SearchBar = ({ setData, setIsLoading, setIsFetched, setIsError }) => {
   const queryRef = useRef();
 
   const handleSubmit = async (e) => {
     const query = queryRef.current.value;
     e.preventDefault();
+    setIsError(false);
     setIsLoading(true);
-    const data = await fetchData(query);
-    console.log(data);
-    setData(data);
+    setIsFetched(true);
+    try {
+      const data = await fetchData(query);
+      setData(data.foods);
+    } catch (err) {
+      setIsError(true);
+    }
+
     setIsLoading(false);
   };
 
