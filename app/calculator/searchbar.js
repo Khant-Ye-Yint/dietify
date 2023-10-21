@@ -1,7 +1,23 @@
-const SearchBar = () => {
+import { useRef } from 'react';
+import { fetchData } from '@/hooks/fetchData';
+
+const SearchBar = ({ setData, setIsLoading }) => {
+  const queryRef = useRef();
+
+  const handleSubmit = async (e) => {
+    const query = queryRef.current.value;
+    e.preventDefault();
+    setIsLoading(true);
+    const data = await fetchData(query);
+    console.log(data);
+    setData(data);
+    setIsLoading(false);
+  };
+
   return (
-    <form className="relative">
+    <form className="relative" onSubmit={handleSubmit}>
       <textarea
+        ref={queryRef}
         placeholder="3 boiled eggs, 2 chicken wings"
         type="text"
         className=" pl-4 pr-24 py-3 rounded-md shadow-xl w-[300px] md:w-[500px] lg:w-[800px] h-[80px] md:h-[90px]"
