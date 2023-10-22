@@ -31,7 +31,7 @@ const Calculator = () => {
       ) : (
         isFetched &&
         (isLoading ? (
-          <div className="relative w-14 h-14 animate-spin">
+          <div className="relative w-13 h-13 animate-spin">
             <Image
               src={LoadingImg}
               layout="fill"
