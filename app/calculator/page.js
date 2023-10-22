@@ -1,9 +1,13 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
+
 import SearchBar from './searchbar';
 import DetailTable from './detailTable';
 import NutritionList from './nutritionList';
+
+import LoadingImg from '../../public/loading.png';
 
 const Calculator = () => {
   const [data, setData] = useState([]);
@@ -27,7 +31,14 @@ const Calculator = () => {
       ) : (
         isFetched &&
         (isLoading ? (
-          <h1>Loading... </h1>
+          <div className="relative w-14 h-14 animate-spin">
+            <Image
+              src={LoadingImg}
+              layout="fill"
+              objectFit="contain"
+              objectPosition="center"
+            />
+          </div>
         ) : (
           <>
             <DetailTable data={data} />
