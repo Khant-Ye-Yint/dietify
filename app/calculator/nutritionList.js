@@ -62,24 +62,41 @@ const NutritionList = ({ data }) => {
 
       transFat !== undefined && (nutrients.transFat += transFat.value);
 
-      nutrients.caffeine += chunk.full_nutrients.find(
-        (element) => element.attr_id == 262
-      ).value;
-      nutrients.alcohol += chunk.full_nutrients.find(
-        (element) => element.attr_id == 221
-      ).value;
-      nutrients.water += chunk.full_nutrients.find(
-        (element) => element.attr_id == 255
-      ).value;
-      nutrients.zinc += chunk.full_nutrients.find(
-        (element) => element.attr_id == 309
-      ).value;
-      nutrients.calcium += chunk.full_nutrients.find(
-        (element) => element.attr_id == 301
-      ).value;
-      nutrients.iron += chunk.full_nutrients.find(
-        (element) => element.attr_id == 303
-      ).value;
+      const caffeine = chunk.full_nutrients.find(
+        (element) => element.attr_id === 262
+      );
+
+      caffeine !== undefined && (nutrients.caffeine += caffeine.value);
+
+      const alcohol = chunk.full_nutrients.find(
+        (element) => element.attr_id === 221
+      );
+
+      alcohol !== undefined && (nutrients.alcohol += alcohol.value);
+
+      const water = chunk.full_nutrients.find(
+        (element) => element.attr_id === 225
+      );
+
+      water !== undefined && (nutrients.water += water.value);
+
+      const zinc = chunk.full_nutrients.find(
+        (element) => element.attr_id === 309
+      );
+
+      zinc !== undefined && (nutrients.zinc += zinc.value);
+
+      const calcium = chunk.full_nutrients.find(
+        (element) => element.attr_id === 301
+      );
+
+      calcium !== undefined && (nutrients.calcium += calcium.value);
+
+      const iron = chunk.full_nutrients.find(
+        (element) => element.attr_id === 303
+      );
+
+      iron !== undefined && (nutrients.iron += iron.value);
     });
 
     Object.keys(nutrients).forEach((nutrient) => {
@@ -105,7 +122,7 @@ const NutritionList = ({ data }) => {
         />
         <NutritionCard attritube="Sodium" value={`${info.sodium} mg`} />
         <NutritionCard attritube="Carbs" value={`${info.carbs} cal`} />
-        <NutritionCard attritube="Protein" value={`${info.protein} mg`} />
+        <NutritionCard attritube="Protein" value={`${info.protein} g`} />
       </div>
       <div className="flex flex-row justify-between items-center flex-wrap max-w-[800px]">
         <NutritionInfo
