@@ -21,6 +21,10 @@ module.exports = {
       fontWeight: {
         bolder: '5000',
       },
+      backgroundImage: {
+        'thai-food': 'url("/thai-food.jpg")',
+        'typing-robot': 'url("/typing-robot.jpg")',
+      },
     },
   },
   plugins: [],
