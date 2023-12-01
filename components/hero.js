@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -5,6 +7,11 @@ import FoodImg from '../public/testPic.png';
 import MouseImg from '../public/mouse.png';
 
 const Hero = () => {
+  const scrollToAbout = () => {
+    const element = document.getElementById('about');
+    element.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div>
       <div className="flex flex-row flex-wrap items-center justify-between h-full min-h-[80vh]">
@@ -14,7 +21,9 @@ const Hero = () => {
           </h1>
           <p className="text-lg font-montserrat">Dietify and know your food</p>
           <div className="flex flex-row justify-start space-x-5">
-            <button className="button bg-yellow">What is Dietify</button>
+            <button className="button bg-yellow" onClick={scrollToAbout}>
+              What is Dietify
+            </button>
             <Link href="/calculator">
               <button className="button bg-aqua">Get Started</button>
             </Link>

@@ -3,7 +3,10 @@ import HealthyCouple from '../public/healthy-couple.jpg';
 
 const About = () => {
   return (
-    <section className="flex flex-row flex-wrap items-center justify-between py-[10vh]">
+    <section
+      id="about"
+      className="flex flex-row flex-wrap items-center justify-between py-[15vh]"
+    >
       <div className="flex flex-col items-start justify-center flex-1 gap-4">
         <h1 className="text-5xl font-bold font-lobster">What is dietify?</h1>
         <p>
