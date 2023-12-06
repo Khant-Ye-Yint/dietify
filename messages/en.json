@@ -1,0 +1,18 @@
+{
+    "Hero": {
+      "title": "Identify your food nutrients and maintain your fitness",
+      "paragraph" : "Dietify and know your food",
+      "buttonOne" : "What is dietify",
+      "buttonTwo" : "Get Started"
+    },
+    "About": {
+      "title": "What is dietify?",
+      "paragraph" : "Dietify is the best companion for everyone who values their health. Dietify calculates the food nutrients so that you know what you eat. Data is collected from biggest nutrition company, nutrionix with coverage of over 1 million food items from USA and Canada."
+    },
+    "Info": {
+      "foodItems" : "Over 1 Million food items",
+      "foodParagraph" : "917,860 items from 45,178 grocery brands, 189,974 items from 868 restaurants, 10,428 Common Food Tags mapped to 38,706 Common Food Phrases",
+      "naturalLanguage" : "Natural Language",
+      "naturalLanguageParagraph" : "Turn spoken text into precise nutrition analysis with our state-of-the-art natural language functionality."
+    }
+  }

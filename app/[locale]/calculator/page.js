@@ -7,7 +7,7 @@ import SearchBar from './searchbar';
 import DetailTable from './detailTable';
 import NutritionList from './nutritionList';
 
-import LoadingImg from '../../public/loading.png';
+import LoadingImg from '../../../public/loading.png';
 
 const Calculator = () => {
   const [data, setData] = useState([]);

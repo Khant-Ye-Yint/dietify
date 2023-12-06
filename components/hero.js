@@ -1,31 +1,42 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '../navigation';
 
 import FoodImg from '../public/testPic.png';
 import MouseImg from '../public/mouse.png';
+import useLocale from '@/hooks/useLocale';
 
-const Hero = () => {
+const Hero = ({ translations }) => {
   const scrollToAbout = () => {
     const element = document.getElementById('about');
     element.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const locale = useLocale();
+
   return (
     <div>
       <div className="flex flex-row flex-wrap items-center justify-between h-full min-h-[80vh]">
         <section className="flex flex-col flex-1 space-y-7 md:space-y-10">
-          <h1 className="text-6xl md:text-7xl text-start font-lobster">
-            Identify your food nutrients and maintain your fitness
+          <h1
+            className={` ${
+              locale === 'en'
+                ? 'text-6xl md:text-7xl'
+                : 'text-4xl leading-[70px]'
+            } text-start font-lobster`}
+          >
+            {translations.title}
           </h1>
-          <p className="text-lg font-montserrat">Dietify and know your food</p>
+          <p className="text-lg font-montserrat">{translations.paragraph}</p>
           <div className="flex flex-row justify-start space-x-5">
             <button className="button bg-yellow" onClick={scrollToAbout}>
-              What is Dietify
+              {translations.buttonOne}
             </button>
             <Link href="/calculator">
-              <button className="button bg-aqua">Get Started</button>
+              <button className="button bg-aqua">
+                {translations.buttonTwo}
+              </button>
             </Link>
           </div>
         </section>
