@@ -10,8 +10,8 @@ const fetchData = async (query) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-app-id': '855c131a',
-        'x-app-key': '64119f627ec38e49b4ceef8ed61f8214',
+        'x-app-id': '0399587b',
+        'x-app-key': '8294f67ca8f48a280739215191488a57',
       },
       body: JSON.stringify(data),
     }
