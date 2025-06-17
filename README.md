@@ -2,4 +2,4 @@
 
 Identify your food nutrients using natural language.
 
-dietifykyy.vercel.app
+[Link to the website](dietifykyy.vercel.app)
